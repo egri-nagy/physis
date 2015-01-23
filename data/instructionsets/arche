@@ -1,0 +1,71 @@
+arche
+
+TYPE Nop 1
+nop 0 0
+
+TYPE Environmental 2
+in 1 1
+out 2 1
+
+TYPE Transfer 3
+load 3 2
+store 4 2
+move 5 2
+
+TYPE Allocate 4
+allocate 6 1
+
+TYPE Condotional 5
+compare 7 3
+ifzero 8 1
+
+TYPE Jump  6
+jump 9 1
+
+TYPE Crementors 7
+dec 10 1
+inc 11 1
+
+TYPE Biological 8
+divide 12 0
+
+TYPE Communicational 9
+sdir 13 1
+gdir 14 1
+send 15 1
+receive 16 1
+
+TYPE Computational 10
+add 17 3
+sub 18 3
+mul 19 3
+div 20 3 
+mod 21 3
+and 22 3 
+or 23 3
+xor 24 3
+neg 25 2
+not 26 2
+shift_l 27 2
+shift_r 28 2
+
+TYPE Threading 11
+fork_th 29 1
+kill_th 30 0
+
+TYPE Descriptors 12
+R 31 0
+S 32 0
+Q 33 0
+I 34 0
+B 35 0
+SEPARATOR 36 0
+
+TYPE lemon 13
+clear 37 1
+cinc  38 1
+cdec  39 1
+is_sep 40 2
+rel_load 41 3
+rel-store 42 3
+ifnotzero 43 1

@@ -1,0 +1,68 @@
+physis_home=/home/sirna/physis/
+max_number_of_updates=50000
+
+#seed organisms. Signed by integers begining from 1 
+
+#seed_organism1=data/genebank/mar/mar.short.manynops
+
+
+# virtualmachine related stuff
+virtual_machine_class_name=mar.virtualmachine.MarVM
+
+# nursing
+nurse_class_name=physis.core.nursing.MaxAgePerMeritNurse
+
+# instruction set
+instructionset=data/instructionsets/mar.standard
+
+
+# lifespace
+lifespace_class_name=physis.core.lifespace.DistributedLattice2DLifeSpace
+2Dlattice_xsize=100
+2Dlattice_ysize=100
+DistributedLattice2DLifeSpace_north=213.28.150.190:2000
+DistributedLattice2DLifeSpace_east=213.28.150.190:2001
+DistributedLattice2DLifeSpace_south=213.28.150.190:2002
+DistributedLattice2DLifeSpace_west=213.28.150.190:2003
+DistributedLattice2DLifeSpace_local_north=2000
+DistributedLattice2DLifeSpace_local_east=2000
+DistributedLattice2DLifeSpace_local_south=2000
+DistributedLattice2DLifeSpace_local_west=2000
+
+
+# time_slicing
+scheduler_class_name=physis.core.scheduler.MeritScheduler
+average_time_slice=11
+
+# mutation 
+  # copy mutation / per copy
+  copy_mutation_rate=0.008
+  # mutation / per divide
+  divide_mutation_rate=0.0
+  divide_insert_rate=0.04
+  divide_delete_rate=0.04
+
+# memory allocation
+min_allocation_ratio=0.5
+max_allocation_ratio=2
+
+# divide ratios
+min_proliferation_ratio=0.25
+max_proliferation_ratio=0.75
+
+# genebank
+gene_bank_enabled=true
+birth_threshold=133
+spawn_threshold=133
+gene_bank_max_size=13000
+gene_bank_output_file=results/genebank
+
+# tasks
+task_filename=data/tasks/standard.tasks
+
+
+
+
+
+
+

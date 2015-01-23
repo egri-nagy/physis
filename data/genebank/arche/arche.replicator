@@ -1,0 +1,84 @@
+#minimalistic replicator for the ARCHE universal processor
+#HANDWRITTEN!!!
+R	# 1. counter_reg - simply for counting  
+B
+R	# 2. pointer_reg
+B
+R       # 3. return_reg - for making cycles
+B
+R       # 4. result_reg
+#Here come the instructions
+I	# 0.  store_ptr - copies the IP to the pointer_reg
+move
+0
+2
+I	# 1. clear_counter - clears the content of the counter_reg
+clear
+1
+I	# 2. s_lab - selfish label: stores the current IP to the return_reg
+move
+0
+3
+I	# 3. inc_counter - increments the counter
+inc
+1
+I	# 4. cinc_pointer - cell-increment of the pointer
+cinc
+2
+I	# 5. is_ptr_sep - examines whether points to the SEPARATOR
+load
+2
+4
+is_sep
+4
+4
+ifzero
+4
+I	# 6. jump_by_reg
+jump
+3
+I	# 7. allocate
+allocate
+1
+I	# 8. fill_pointer
+move
+1
+2
+I	# 9. load_data
+load
+1
+4
+I	# 10. rel_store
+42
+1
+2
+4
+I	# 11. dec_counter
+dec
+1
+I	# 12. if_zero_counter
+ifnotzero
+1
+I	# 13. divide
+divide
+SEPARATOR
+0
+1
+2
+3
+4
+5
+6
+3
+7
+#end of allocation
+8
+2	#begining of the copy process
+11
+9
+10
+12
+6
+13
+
+

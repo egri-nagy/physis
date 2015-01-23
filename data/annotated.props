@@ -1,0 +1,151 @@
+# This is an example properties file for Physis.
+# This file contains the parameters for an experimental setup.
+# The parameters are either single values, other configuration files
+# or Java classes.
+
+#------GENERAL---------------------------------------------------------
+# full path of the directory where Physis distributioon is
+physis_home=/home/sirna/WORK/physis/
+
+# the number of how many updates should be done before stopping 
+# the experiment
+max_number_of_updates=1000000
+#----------------------------------------------------------------------
+
+#-------RANDOM NUMBER GENERATOR------------------------------------------
+# if random seed is not given then the current time is used
+# the  value can be found in the output 
+#random_seed=4
+
+# selects the method to generate random numbers 
+# see package physis.core.random
+random_number_generator=JavaUtilRandom
+#-------------------------------------------------------------------------
+
+#-------ANCESTOR ORGANISMS------------------------------------------------
+# Seed organisms, the ancestors. Signed by integers begining from 1.
+# Arbitrary many can be given, and they can be different. 
+# They're placed in random locations. 
+seed_organism1=data/genebank/arche/arche.replicator
+seed_organism2=data/genebank/arche/arche.replicator
+seed_organism3=data/genebank/arche/arche.replicator
+seed_organism4=data/genebank/arche/arche.replicator
+seed_organism5=data/genebank/arche/arche.replicator
+seed_organism6=data/genebank/arche/arche.replicator
+#-------------------------------------------------------------------------
+
+#-------NURSE and SCHEDULER------------------------------------------------
+# The algorithm for nursing can be selected by giving 
+# the appropriate name of the class. see package physis.core.nurse
+nurse_class_name=physis.core.nursing.MaxAgePerMeritNurse
+
+# The method of distributing time slices to organisms. 
+# see package physis.core.scheduler
+scheduler_class_name=physis.core.scheduler.ScaledMeritScheduler
+
+# The average value of the sizes of distributed timeslices 
+# given to organisms in an update cycle.
+# This value is used by the selected scheduler and the actual
+# timeslices may differ heavily. 
+average_time_slice=11
+#-------------------------------------------------------------------------
+
+#--------VIRTUAL MACHINE-------------------------------------------------
+# The fully qualified class name for the virtual machine.
+virtual_machine_class_name=arche.UP
+
+# The instruction set can be  set here.
+# WARNING! This should be compatible with the virtual machine!
+instructionset=data/instructionsets/arche
+#------------------------------------------------------------------------
+
+#--------LIFESPACE-------------------------------------------------------
+# The topology of the lifespace. Specific classes may require
+# additional parameters. see package physis.core.lifespace
+lifespace_class_name=physis.core.lifespace.Lattice2DLifeSpace
+2Dlattice_xsize=200
+2Dlattice_ysize=120
+#------------------------------------------------------------------------
+
+
+#--------MUTATION and CELL DIVISION---------------------------------------
+# Mutation probabilities
+# copy mutation / per copy
+copy_mutation_rate=0.008
+
+# mutation / per divide
+divide_mutation_rate=0.0
+
+# The proability of inserting/deleting instructions during 
+# cell division
+divide_insert_rate=0.013
+divide_delete_rate=0.013
+
+
+# Memory allocation are allowed only if  the allocated size
+# is in the given range.
+min_allocation_ratio=0.5
+max_allocation_ratio=2
+
+# Cell division allowed only if the ratio of copied instructions 
+# is above this value.
+min_proliferation_ratio=0.80
+#-------------------------------------------------------------------------
+
+#----------GENEBANK--------------------------------------------------------
+# Genebank is a subsystem for real-time recording genomes.
+gene_bank_enabled=false
+
+# If no activation recorded in the genebank during this number of 
+# updates, then the genome is considered to be ephemer and can be removed.
+expiration_time=100
+
+# If the genome wasn't ephemer but stopped any activity 
+# (probably vanished) then after this number of update cycles
+# it can be written out into the results file.
+fossil_time=1600
+
+# the expiratioin can be overriden if the number of spawns are bove this
+# threshold
+spawn_threshold=0
+
+# Maximum number of genomes stored in memory.
+gene_bank_max_size=100000
+
+# The file for storing fossil data.
+gene_bank_output_file=results/genebank
+#---------------------------------------------------------------------------
+
+
+#------------TASKS----------------------------------------------------------
+# The file containing the class nammes for tasks to be loaded 
+# and the bonus values.
+task_filename=data/tasks/standard.tasks
+
+# as tasks can be loaded/removed the maximum number of tasks
+# should be given here
+max_number_of_tasks=20
+
+# The range of input_data (food) is bounded.
+input_data_higher_bound=13
+#---------------------------------------------------------------------------
+
+
+#------------STATISTICS-----------------------------------------------------
+# The configuration file containing the frequency of measures and 
+# describing what to measure
+statistics_configuration=data/statistics/statistics.conf
+statistics_data_file=results/statistics
+#---------------------------------------------------------------------------
+
+
+#------------TRIGGERS-------------------------------------------------------
+# Triggers are predefined events to be executed during the experiment.
+# see package physis.core.triggers
+trigger_file=data/triggers/extract
+#----------------------------------------------------------------------------
+
+
+
+
+

@@ -1,0 +1,22 @@
+#minimalistic self-replicator with many nop instruction inserted 
+#the code is actually the same as in mar.short
+#VM: mar.virtualmachine.MarVM INSTRUCTIONSET: mar.standard
+count-f
+nop
+zero
+nop
+allocate
+nop
+label-b
+nop
+copy
+nop
+inc
+nop
+if-n-equ
+jump-b
+nop
+nop
+divide
+nop
+label-f

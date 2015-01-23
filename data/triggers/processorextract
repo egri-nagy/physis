@@ -1,0 +1,2 @@
+# extracts the processor architecture and instruction set info of the population
+ProcessorStructureExtract periodical 10 15000000 1000 results

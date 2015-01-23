@@ -1,0 +1,19 @@
+grep -v update statistics > stat
+
+gri view_fitness.gri
+gv view_fitness.ps &
+
+gri view_merit.gri
+gv view_merit.ps &
+
+#gri view_age.gri
+#gv view_age.ps &
+
+#gri view_fertileliving.gri
+#gv view_fertileliving.ps &
+
+gri view_genomel.gri
+gv view_genomel.ps &
+
+#gri view_effectivel.gri
+#gv view_effectivel.ps &

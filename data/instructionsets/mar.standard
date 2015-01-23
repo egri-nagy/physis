@@ -1,0 +1,52 @@
+mar.standard
+
+TYPE Labels 1
+label-f   10 0 # label which can be found only forward
+label-b   11 0 # label which can be found only backward
+
+
+TYPE Flow_control_operations 2
+if-less   20 0 # execute the next instruction if the top of the stack is less than the register - is it superflous?? no.
+if-n-equ  21 0 # execute the next instruction if the top of the stack is not equal the register
+# Jump instructions 
+jump-f    22 0 # jump to the next label forward (if multiple jumps are together, than search for the numberofjumpsth label)
+jump-b    23 0 # jump to the next label backward (the same mechanism)
+	
+
+TYPE Single_Argument_Math 3  # working with the top of stack
+shift-r   30 0 # rotate right
+shift-l   31 0 # rotate left
+inc       32 0 # increment
+dec       33 0 # decrement
+
+
+TYPE Double_Argument_Math 4 # works with the two top elements of stack
+add      40 0
+sub      41 0
+nand     42 0
+swap     43 0
+
+TYPE Biological_Operations 5
+copy     50 0 # copy memory location top of stack to memory location top+register (register is the offset)
+allocate 51 0 # allocates new cells. The number of cells is in the register.
+divide   52 0
+
+TYPE I/O_and_Sensory 6
+get      60 0 # environment to push
+put      61 0 # pop to environment
+count-f  62 0 # put into the register the number of instructions to the next forward - count and label instructions included (n count-instructions means that the nth label must be found) 
+count-b  63 0  # the same with the backward direction
+
+TYPE Transfer 7
+top2reg  70 0  # top to register
+push     71 0  # pushing register
+pop      72 0  # poping into register
+zero     73 0  # pushing zero to stack
+
+TYPE Noops 9
+nop      90 0
+
+
+
+
+

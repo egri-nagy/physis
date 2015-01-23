@@ -1,0 +1,13 @@
+# Basic tasks
+basic    Echo      1.05     1.04    1.03
+basic    Get       1.03     1.02    1.01
+basic    Put       1.03     1.02    1.01
+# Simple math operations
+math     Add       1.13     1.12      1.11
+math     Add3Args  1.16     1.11      1.10
+math     Sub       1.13       1.12      1.11
+math     Double    1.1       1.09      1.08
+math     Triple    1.18      1.16      1.14
+# Advanced 
+advanced Sort      1.4   1.3  1.2 1.1
+advanced Reverse   1.3   1.2  1.1

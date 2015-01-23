@@ -1,0 +1,77 @@
+physis_home=/home/sirna/physis/
+max_number_of_updates=50000
+random_number_generator=JavaUtilRandom
+#random_seed=329072
+
+#seed organisms. Signed by integers begining from 1 
+seed_organism1=data/genebank/psoup/psoup.short
+seed_organism2=data/genebank/psoup/psoup.short
+seed_organism3=data/genebank/psoup/psoup.short
+seed_organism4=data/genebank/psoup/psoup.short
+seed_organism5=data/genebank/psoup/psoup.short
+seed_organism6=data/genebank/psoup/psoup.short
+seed_organism7=data/genebank/psoup/psoup.short
+seed_organism8=data/genebank/psoup/psoup.short
+seed_organism9=data/genebank/psoup/psoup.short
+
+# virtualmachine related stuff
+virtual_machine_class_name=psoup.virtualmachine.PrimordialSoupVM
+
+# nursing
+nurse_class_name=physis.core.nursing.MaxAgePerMeritNurse
+
+# instruction set
+instructionset=data/instructionsets/psoup.classic
+
+#geneticcodetape
+pool_size=400000
+
+# lifespace
+lifespace_class_name=physis.core.lifespace.MemoryPoolLifeSpace
+lifespace_size=4000
+
+# time_slicing
+scheduler_class_name=physis.core.scheduler.ScaledMeritScheduler
+average_time_slice=11
+
+# mutation 
+  # copy mutation / per copy
+  copy_mutation_rate=0.008
+  # mutation / per divide
+  divide_mutation_rate=0.0
+  divide_insert_rate=0.04
+  divide_delete_rate=0.04
+
+#input_data
+input_data_higher_bound=13
+
+# memory allocation
+min_allocation_ratio=0.8
+max_allocation_ratio=2
+
+# divide ratios
+min_proliferation_ratio=0.8
+
+# genebank
+gene_bank_enabled=true
+expiration_time=30
+fossil_time=30
+spawn_threshold=33
+gene_bank_max_size=100000
+gene_bank_output_file=results/genebank
+
+# tasks
+task_filename=data/tasks/standard.tasks
+
+# statistics
+statistics_configuration=data/statistics/statistics.conf
+statistics_data_file=results/statistics
+
+#triggers
+trigger_file=data/triggers/snapshot
+
+
+
+
+
+

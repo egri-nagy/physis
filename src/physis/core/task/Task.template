@@ -1,0 +1,27 @@
+/**
+ * Physis - platform for digital evolution
+ * License: GNU GPL
+ *
+ * $Id: Task.template,v 1.2 2001/07/06 08:23:28 sirna Exp $
+ * $Revision: 1.2 $
+ * $Date: 2001/07/06 08:23:28 $
+ */
+package physis.core.task.<PACKAGE NAME = TASK TYPE>;
+
+import  physis.core.task.TaskAdapter;
+
+public class <TASKNAME> extends TaskAdapter{
+
+    //WARNING: the first element of the arrays are the valid size of the in/outputs! e.g. the first parameter is in[1].
+    public boolean checkActivity(int[] in, int[] out){
+	<CHECKING THE I/O ARRAYS>
+    }
+    
+    public int getInputSize() { return <INPUTSIZE>;}
+    public int getOutputSize() { return <OUTPUTSIZE>;}
+   
+    //if the I/O arrays shouldn't be cleared then this is needed
+    public boolean shouldBeCleared() { return false; }
+
+}
+

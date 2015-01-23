@@ -1,0 +1,37 @@
+/*
+ * This template can be used for implementing new triggers.
+ *
+ *
+ * Physis - platform for digital evolution
+ * License: GNU GPL
+ *
+ * $Id: Trigger.template,v 1.1 2000/09/12 07:43:33 sirna Exp $
+ * $Revision: 1.1 $
+ * $Date: 2000/09/12 07:43:33 $
+ */
+package physis.core.triggers;
+
+<IMPORT DECLARATIONS>
+
+import java.util.StringTokenizer;
+
+public class <NAME>Trigger extends <TRIGGERTYPE>{
+
+    <FIELD DECLARATIONS>
+    
+    public void setParameters(StringTokenizer params){
+	<SETTING THE PARAMETERS>
+    }
+    
+    public void execute(){
+	<THE EXECUTION PART>
+		
+	if (is_periodical){
+	    adjustPeriodicalSchedule();
+	}
+    }
+    
+    public String toString(){
+        return <SHORT INFORMATION TO BE DISPLAYED>;
+    }
+}

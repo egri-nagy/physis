@@ -1,0 +1,2 @@
+# extracts the maximum-fitness organism
+DominantExtract periodical 1000 15000000 1000 results

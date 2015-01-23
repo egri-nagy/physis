@@ -1,0 +1,2 @@
+# makes a genetic snapshot - see GeneticSnapshot.java
+GeneticSnapshot periodical 1 50000 10 results/dominantf.dat

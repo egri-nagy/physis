@@ -1,0 +1,114 @@
+psoup.classic
+
+TYPE Jump 1
+JUMP    0 1
+
+TYPE Biological 2
+SPWN    1 0 
+
+TYPE Register-register_moves 2
+PCR1	2 0
+PCR2	3 0 
+PCR3	4 0
+PCR4	5 0
+R2R1	6 0
+R3R1	7 0
+R4R1	8 0
+R1R2	9 0
+R1R3	10 0
+R1R4	11 0
+
+TYPE Add 3 #The destination and the first argument is always the R1 register, the second is defined by the instruction.
+ADD1	12 0
+ADD2	13 0
+ADD3	14 0
+ADD4	15 0
+ 
+TYPE Sub 4 # Like the adds.
+SUB1	16  0
+SUB2	17 0
+SUB3	18 0
+SUB4	19 0
+ 
+TYPE  Register-memory_moves 5
+R2M1	20 0
+R3M1	21 0
+R4M1	22 0
+R1M2	23 0
+R3M2	24 0
+R4M2	25 0
+M1R2	26 0
+M1R3	27 0
+M1R4	28 0
+M2R1	29 0
+M2R3	30 0
+M2R4	31 0
+
+TYPE Conditional_jumps 6  # the operand is the next instruction which is searched forward 
+JPZ1	32 1 #jumps if R1 is zero
+JPZ2	33 1
+JPZ3	34 1
+JPZ4	35 1
+ 
+TYPE Register-immediate_moves 7
+NNR1	36 1
+NNR2	37 1
+NNR3	38 1
+NNR4	39 1
+
+TYPE Increment 8
+INC1	40 0 #increments the R1 register
+INC2	41 0
+INC3	42 0 
+INC4	43 0 
+
+TYPE Decrement 9
+DEC1	44 0 #decrements the R1 register
+DEC2	45 0 
+DEC3	46 0
+DEC4	47 0
+
+TYPE Unconditional_jump 10    
+JMPF	48 1 # the operand is the next instruction which is searched forward
+JMPB	49 1 #backward
+
+TYPE Stack_operations 11
+PSHP	50 0
+PSH1	51 0
+PSH2	52 0
+PSH3	53 0
+PSH4	54 0
+POP1	55 0
+POP2	56 0
+POP3	57 0
+POP4	58 0
+ 
+TYPE Subroutine_call 12
+CLLF	59 1
+CLLB	60 1
+RETN	61 0
+
+TYPE Search 13
+SCF1	62 1
+SCF2	63 1
+SCF3	64 1
+SCF4	65 1
+SCB1	66 1
+SCB2	67 1
+SCB3	68 1
+SCB4	69 1
+
+TYPE Labels 14
+LBL0	70 0
+LBL1	71 0
+LBL2	72 0
+LBL3	73 0
+LBL4	74 0
+LBL5	75 0
+LBL6	76 0
+LBL7	77 0
+LBL8	78 0
+LBL9	79 0
+ 
+TYPE No-operation 15
+NOOP	80 0

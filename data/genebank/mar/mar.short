@@ -1,0 +1,13 @@
+#minimalistic self-replicator (but not yet optimized for replication time)
+#VM: mar.virtualmachine.MarVM INSTRUCTIONSET: mar.standard
+
+count-f		# calculates the size
+zero		# pushes zero into stack
+allocate	# allocate memory for the child 
+label-b		# the beginning of the copy cycle
+copy
+inc
+if-n-equ
+jump-b
+divide		# cell division
+label-f

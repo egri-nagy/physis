@@ -1,0 +1,28 @@
+open stat    # Open the data file
+read columns x z y   # Read (x,y) columns
+set x name "Time, updates"
+set y size 10
+set x size 25
+#delete x scale
+set y axis 10 100 10
+#set x type log
+set y name "Maximum and average fitness"
+
+
+draw curve
+
+open stat    # Open the data file
+read columns x  y   # Read (x,y) columns
+set x name "Time, updates"
+set y size 10
+set x size 25
+#delete x scale
+#set x axis 0.1 10 1
+#set x type log
+
+
+
+draw curve
+
+
+quit    # End the plot

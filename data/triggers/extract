@@ -1,0 +1,2 @@
+# extracts the maximum-fitness organism
+OrganismExtract periodical 1000 15000000 1000 max_fitness results

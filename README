@@ -1,0 +1,47 @@
+1. General Information
+
+Physis is a platform for research in digital evolution. The evolution of little pieces of assembly-like computer programs can be examined with this tool. More information can be found on the webpage: http://physis.sf.net
+
+2. Installation
+
+On Unix systems you should unpack the gzipped tar archive (it can be done with WinZip on Windows as far as I know). You should get a directory structure with the root directory called physis. All necessary files can be found in this directory.
+
+3. System Requirements
+
+Any Java 2 compatible virtual machine should be sufficient. Several VMs for different platforms can be downloaded from http://java/sun.com
+
+4. Running Physis 
+
+Basically in order to run Physis you should adjust one parameter in the configuration file: the physis_home property should contain the full path to the directory containing the Physis system. The confguration files can be found in <physis_dir>/data/ directory, usually with .props extension. For more information check the annotated.props configuration file.
+
+You should also adjust your CLASSPATH so that it should contain the <physis_dir>/src/ entry. 
+
+Running Physis without GUI:
+
+java physis.core.PHYSIS properties_file
+
+Running Physis with GUI
+
+java physis.visualisation.PhysisGUI properties_file
+
+(please note that not all lifespace topologies have corresponding viewers)
+
+Displaying results: By default the results are in <physis_dir>/results/ directory. Postscript diagrams can be easily generated with an R ( http://www.r-project.org ) function. It can be found in <physis_dir>/src/R/. After starting R:
+
+sys.source("plot.statistics.R");
+plot.statistics("fullpath/statistics");
+
+Debugging digital organisms (extracted by a trigger):
+
+java physis.core.virtualmachine.PhysisVMTracer props organism [cpu] [io] [state]
+
+Running without parameters gives further information.
+
+5. Contact
+
+This README is just a short collection of hints (Unfortunately I have no time to write a nice manual...). If you have some questions or ideas how to improve the system, or you would like to contribute in developing Physis then just send me an email and we will find out what to do.
+
+
+Attila Egri-Nagy
+nagyat@dragon.klte.hu
+

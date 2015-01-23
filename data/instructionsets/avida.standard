@@ -1,0 +1,51 @@
+avida
+
+TYPE No-ops 1
+nop-A    10
+nop-B    11
+nop-C    12
+
+TYPE Flow_control_operations 2
+if-less  20
+if-n-equ 21
+if-bit-1 22
+jump-f   23
+jump-b   24
+call     26
+return   27	
+
+TYPE Single_Argument_Math 3
+shift-r  30
+shift-l  31
+inc      33
+dec      34
+push     35
+pop      36
+swap-stk 38	
+
+TYPE Double_Argument_Math 4
+add      40
+sub      41
+nand     42
+swap     43
+
+TYPE Biological_Operations 5
+copy     50
+allocate 53
+divide   54
+
+TYPE I/O_and_Sensory 6
+get      60
+put      61
+search-f 62
+search-b 63
+
+TYPE Additional_instructions 7
+rotate-l 70
+rotate-r 71
+read     72
+write    73
+nop-X    74
+if-n-cpy 75
+order    76
+jump-p   77

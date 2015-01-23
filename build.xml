@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+  <!-- Build file for Physis by Brian O. Bush -->
+  <project name="Physis" default="compile" basedir=".">
+
+    <property name="Name" value="Physis"/>
+    <property name="version" value="0.7"/>
+    <property name="src.dir" value="src"/>
+    <property name="doc.dir" value="doc"/>
+    <property name="javadoc.dir" value="doc/javadoc"/>
+    <property name="build.compiler" value="modern"/>
+  
+  <!-- =================================================================== -->
+  <!-- Compiles the source code with debug  info                           -->
+  <!-- =================================================================== -->
+  <target name="compile">
+    <javac srcdir="${src.dir}"
+           destdir="${src.dir}"
+           debug="on"
+           deprecation="on"
+           optimize="on" 
+	   verbose="off"
+	   excludes="tiny/virtualmachine/**"
+	   >
+    </javac>
+  </target>
+
+  <!-- =================================================================== -->
+  <!-- Compiles the source code without debug info, production build       -->
+  <!-- =================================================================== -->
+  <target name="build">
+    <javac srcdir="${src.dir}"
+           destdir="${src.dir}"
+           debug="off"
+           deprecation="on"
+           optimize="on" 
+	   verbose="off"
+	   excludes="tiny/virtualmachine/**"
+	   >
+    </javac>
+  </target>
+
+
+
+  <!-- =================================================================== -->
+  <!-- Compiles the source code verbosely                                            -->
+  <!-- =================================================================== -->
+  <target name="verbose">
+    <javac srcdir="${src.dir}"
+           destdir="${src.dir}"
+           debug="on"
+           deprecation="on"
+           optimize="on" 
+	   verbose="on"
+	   excludes="tiny/virtualmachine/**"
+	   >
+    </javac>
+  </target>
+
+  
+  <!-- =================================================================== -->
+  <!-- Generates Javadoc                                                   -->
+  <!-- =================================================================== -->
+  <target name="doc">
+    <mkdir dir="${javadoc.dir}"/>
+    <javadoc sourcepath="${src.dir}"
+           destdir="${javadoc.dir}"
+	   packageList="${src.dir}/packages"
+           stylesheetfile="${doc.dir}/javadoc.css"
+	   private="true"
+	   Windowtitle="Generated JavaDoc for the PHYSIS system."
+    >
+    </javadoc>
+  </target>
+
+  <!-- =================================================================== -->
+  <!-- Gleaning Up                                                         -->
+  <!-- =================================================================== -->
+  <target name="clean">
+    <delete verbose="true" dir="${javadoc.dir}"/> 
+
+    <delete verbose="true"> 
+        <fileset dir="${src.dir}" includes="**/*.class"/>
+    
+    
+    </delete>
+  </target>
+
+
+</project>
+
