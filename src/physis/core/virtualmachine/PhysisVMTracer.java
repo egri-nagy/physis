@@ -138,7 +138,7 @@ public final class PhysisVMTracer implements Environment{
 	DigitalOrganism parent = pe.getOrganism();
 	parent.recalculateEffectiveLength();
 	System.out.println("Gestation time: " + parent.getVM().getGestationTime());
-	System.out.println("Genomelength: " + parent.getGenomeSize());
+	System.out.println("Genomelength: " + parent.getGenome().size());
 	System.out.println("Effective length: " + parent.getEffectiveLength());
 	parent.getVM().restart();
 	GeneticCodeTape child = pe.getNewSeed();

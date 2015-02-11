@@ -151,7 +151,7 @@ public class Population {
 		    if (digorg.isFertile()) {
 			fertile_orgs++;
 			fitness = digorg.getFitness();
-			genome_length = digorg.getGenomeSize();
+			genome_length = digorg.getGenome().size();
 			effective_length = digorg.getEffectiveLength();
 			//sums
 			age_sum += age;

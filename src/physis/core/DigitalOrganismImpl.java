@@ -127,8 +127,6 @@ public class DigitalOrganismImpl implements DigitalOrganism {
     public PhysisVirtualMachine getVM() { return vm; }
     public Genome getGenome() { return vm.getGenome(); }
     
-    public int getGenomeSize(){ return vm.getGenomeSize(); }
-    
     public Metabolism getMetabolism() { return metabolism; }
     
     public PerformedTasksRegister getPerformedTasks(){ return performed_tasks; }
