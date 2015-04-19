@@ -149,7 +149,6 @@ public class MarVM extends PhysisVirtualMachine{
     }
     
     public Genome getGenome(){ return tape.getGenome(); }
-    public int getGenomeSize() { return tape.getSize(); }
     
     public String getState(){
 	StringBuffer sb = new StringBuffer();

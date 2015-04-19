@@ -67,11 +67,6 @@ public abstract class PhysisVirtualMachine extends VirtualMachine{
     public abstract Genome getGenome();
     
     /**
-     *  Returns the size of the genome.
-     */
-    public abstract int getGenomeSize();
-    
-    /**
      * Gives the number of copied or executed instructions. (It grabs it from the CodeTape.)
      */
     public int getEffectiveLength() {

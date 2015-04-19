@@ -76,11 +76,6 @@ public interface DigitalOrganism {
     Genome getGenome();
     
     /**
-     * Gives the size of the organism's genome.
-     */
-    int getGenomeSize();
-    
-    /**
      * Gives the Metabolism of the organism.
      */
     Metabolism getMetabolism();

@@ -86,8 +86,6 @@ public class RemoteDigitalOrganism implements DigitalOrganism{
     public PhysisVirtualMachine getVM(){ return localRef.getVM(); }
     public Genome getGenome(){return localRef.getGenome(); }
     
-    public int getGenomeSize(){return localRef.getGenomeSize(); }
-    
     public Metabolism getMetabolism(){return localRef.getMetabolism();}
     
     public PerformedTasksRegister getPerformedTasks(){return localRef.getPerformedTasks();}
