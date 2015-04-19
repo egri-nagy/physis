@@ -208,7 +208,7 @@ int pool_size;
     public int getCellSize() { return cell_size; }
     public void setColorRangeSize(int new_size){ colorrange = new ColorRange(new_size); }
     public int getColorRangeSize() { return colorrange.getSize(); }
-    public void flipFromZeroFlag(){fromzero_flag = !fromzero_flag;};
+    public void flipFromZeroFlag(){fromzero_flag = !fromzero_flag;}
     
     public void actionPerformed(ActionEvent ae){
 	String action = ae.getActionCommand();

@@ -90,7 +90,7 @@ public class DistributedLattice2DLifeSpace implements CellLifeSpace, Remote2DLat
             Log.status("Servers are ok");
             
             //CLIENTS
-            Socket  socket = null;;
+            Socket  socket = null;
             BufferedReader in;
             PrintWriter out;
             String host_port;

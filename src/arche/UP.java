@@ -469,7 +469,7 @@ public class UP extends PhysisVirtualMachine{
 		    start = i;
 		    state = INSTRUCTION;
 		}
-	    };break;
+	    } break;
 	    case INSTRUCTION :{
 		if ((c == I) || (c == SEPARATOR)){
 		    stop = i;
@@ -478,7 +478,7 @@ public class UP extends PhysisVirtualMachine{
 		    state = BEGIN;
 		    i--;
 		}
-	    };break;
+	    } break;
 	    }//switch
 	    if (c == SEPARATOR){
 		break;
