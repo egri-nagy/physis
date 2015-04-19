@@ -101,7 +101,7 @@ public class Metabolism {
     }
 
     public String toString(){
-	StringBuffer sb = new StringBuffer();
+	StringBuilder sb = new StringBuilder();
 	int[] tmp = getInputs();
 	sb.append("Inputs:");
 	for (int i = 0; i < tmp[0]; i++){

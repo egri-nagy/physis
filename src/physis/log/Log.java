@@ -51,7 +51,7 @@ public class Log extends Object {
     
     public static String getJVMInfo(){
         Properties sysprops = System.getProperties();
-        StringBuffer sb = new StringBuffer();
+        StringBuilder sb = new StringBuilder();
         sb.append("JAVA VERSION: " + sysprops.getProperty("java.version") + "\n");
         sb.append("JAVA CLASSPATH: " + sysprops.getProperty("java.class.path") + "\n");
         sb.append("running on\n");

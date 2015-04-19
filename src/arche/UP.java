@@ -95,7 +95,7 @@ public class UP extends PhysisVirtualMachine{
 
     /** Returns the current state of the processor as a formatted String. */    
     public String getState(){
-	StringBuffer sb = new StringBuffer();
+	StringBuilder sb = new StringBuilder();
 	for (int i = 0; i < ses.length; i++){
 	    sb.append(i + ". " + ses[i] + "\n");
 	}
@@ -110,7 +110,7 @@ public class UP extends PhysisVirtualMachine{
     public String getProcessorInformation(){
 	//quick hack: @ means architecture info, # means number of instructions
 	//TODO: in VirtualMachine make these separated methods...
-	StringBuffer sb = new StringBuffer(1024);
+	StringBuilder sb = new StringBuilder(1024);
 	sb.append("ARCHITECTURE:\n");
 	for (int i = 0; i < ses.length; i++){
 	    sb.append(ses[i].getStructure() + " ");
@@ -850,7 +850,7 @@ public class UP extends PhysisVirtualMachine{
     /* Returns the String representation of an instruction. */
     private String instruction2String(int icode){
 
-	StringBuffer sb = new StringBuffer(32);
+	StringBuilder sb = new StringBuilder(32);
 	sb.append("[");
 	int nextinst = 0;
 	int j = 0;

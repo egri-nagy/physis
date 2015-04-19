@@ -57,7 +57,7 @@ public class TaskAdapter implements Task {
     public void setID(int id_){ id = id_;}
     
     public String toString(){
-        StringBuffer sb = new StringBuffer();
+        StringBuilder sb = new StringBuilder();
 	sb.append(getName() + " ");
 	for (int i = 0; i < meritmultipliers.length; i++){
 	    sb.append(meritmultipliers[i] + " " );

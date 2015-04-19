@@ -167,7 +167,7 @@ public class DigitalOrganismImpl implements DigitalOrganism {
     public Object getPositinInfo() { return position_info; }
     
     public String toString(){
-        StringBuffer sb = new StringBuffer();
+        StringBuilder sb = new StringBuilder();
 	sb.append("#Age: " + age + "\n");
 	sb.append("#Fitness: " + getFitness() + "\n");
 	sb.append("#Merit: " + merit.getMeritValue() + "\n");

@@ -90,7 +90,7 @@ public class DigitalOrganismProxy extends Thread{
      */
     protected void fitness(int index) throws IOException{
         //creating the response
-        StringBuffer response = new StringBuffer();
+        StringBuilder response = new StringBuilder();
         response.append(orgs[index].getFitness());
         response.append("\n.\n");
         //sending the response
@@ -106,7 +106,7 @@ public class DigitalOrganismProxy extends Thread{
      */
     protected void merit(int index) throws IOException{
         //creating the response
-        StringBuffer response = new StringBuffer();
+        StringBuilder response = new StringBuilder();
         response.append(orgs[index].getMerit());
         response.append("\n.\n");
         //sending the response

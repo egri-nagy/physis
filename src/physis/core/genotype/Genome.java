@@ -32,7 +32,7 @@ public class Genome {
     public String toString(){
         if (genome == null) return "It's not a real codetape.";
         InstructionSet is = InstructionSet.getInstance();
-        StringBuffer sb = new StringBuffer();
+        StringBuilder sb = new StringBuilder();
         int i = 0;
 	while (i < genome.length){
 	    Instruction instr = is.getInstructionByCode(genome[i]);

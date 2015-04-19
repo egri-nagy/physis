@@ -47,7 +47,7 @@ public class Stack extends Storage {
     public String getStructure(){ return "S" + size; }
     
     public String toString(){
-      StringBuffer sb = new StringBuffer();
+      StringBuilder sb = new StringBuilder();
       sb.append("stackof" + size + "[");
       if (sp < 0){
         sb.append("empty]");

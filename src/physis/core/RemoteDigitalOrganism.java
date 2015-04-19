@@ -48,7 +48,7 @@ public class RemoteDigitalOrganism implements DigitalOrganism{
     public void vivify(DigitalOrganism neighbour_,GeneticCodeTape codetape,int inherited_length){
         try{
             //neighbour is discarded
-            StringBuffer request = new StringBuffer(DigitalOrganismProxy.VIVIFY);
+            StringBuilder request = new StringBuilder(DigitalOrganismProxy.VIVIFY);
             request.append("\n");
             request.append(index+ "\n+\n");
             request.append(codetape.getSize()+"\n");

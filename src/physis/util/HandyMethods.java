@@ -14,7 +14,7 @@ public class HandyMethods{
      */
     public static String getLongNumberString(long num, int length){
 	String ns = Long.toString(num);
-	StringBuffer sb = new StringBuffer(length+2);
+	StringBuilder sb = new StringBuilder(length+2);
 	
 	for (int i = 0; i < length - ns.length(); i++){
 	    sb.append('0');
@@ -27,7 +27,7 @@ public class HandyMethods{
      * Pretty printing of an int array.
      */
     public static String prettyPrintIntArray(int[] array){
-	StringBuffer sb = new StringBuffer();
+	StringBuilder sb = new StringBuilder();
 	sb.append("[");
 	for (int i = 0; i < array.length; i++){
 	    sb.append(array[i] + ",");
@@ -40,7 +40,7 @@ public class HandyMethods{
      * Pretty printing of a boolean array.
      */
     public static String prettyPrintIntArray(boolean[] array){
-	StringBuffer sb = new StringBuffer();
+	StringBuilder sb = new StringBuilder();
 	sb.append("[");
 	for (int i = 0; i < array.length; i++){
 	    sb.append(array[i] + ",");

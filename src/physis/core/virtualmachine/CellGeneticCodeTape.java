@@ -409,7 +409,7 @@ public class CellGeneticCodeTape implements GeneticCodeTape{
     /** Returns the string representation of the codetape. One instruction per line. */
     public String toString(){
         if (memory == null) return "No real codetape.";
-        StringBuffer sb = new StringBuffer();
+        StringBuilder sb = new StringBuilder();
         for (int i = 0; i < memory.length; i++){
 	    try{
 		sb.append(instruction_set.getInstructionByCode(memory[i]).getMnemonic() + "\n");

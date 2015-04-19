@@ -897,7 +897,7 @@ public class PrimordialSoupVM extends PhysisVirtualMachine{
     public int getEffectiveLength() { return tape.calculateEffectiveLength(); }
     
     public String getState(){
-	StringBuffer sb = new StringBuffer();
+	StringBuilder sb = new StringBuilder();
 	sb.append("IP: " + IP + " R1: " + R1 + " R2: " + R2 + " R3: " + R3 + " R4: " + R4);
 	if (!isEmpty()){
 	sb.append(" STACK [");

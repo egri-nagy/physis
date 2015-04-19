@@ -201,7 +201,7 @@ public class TaskLibrary {
     }
     
     public String toString(){
-        StringBuffer sb = new StringBuffer();
+        StringBuilder sb = new StringBuilder();
         Enumeration groups = groups_by_names.keys();
         while (groups.hasMoreElements()){
 	    String groupname = (String) groups.nextElement();

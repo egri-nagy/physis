@@ -31,7 +31,7 @@ public class PerformedTasksRegister{
     }
     
     public String toString(){
-	StringBuffer sb = new StringBuffer();
+	StringBuilder sb = new StringBuilder();
 	TaskLibrary tl = PHYSIS.environment.getTaskLibrary();
 	for (int i = 0; i < table.length; i++){
 	    if (table[i] != 0){

@@ -151,7 +151,7 @@ public class MarVM extends PhysisVirtualMachine{
     public Genome getGenome(){ return tape.getGenome(); }
     
     public String getState(){
-	StringBuffer sb = new StringBuffer();
+	StringBuilder sb = new StringBuilder();
         sb.append("IP: " + IP + " REGISTER: " + register + " STACK: [");
 	for (int i = 0; i < SP; i++){
 	    sb.append(" " + stack[i] + " ");
